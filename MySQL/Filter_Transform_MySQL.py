@@ -1,4 +1,4 @@
-"""A example to read records on mysql and output the result to file out-read-records-result.txt """
+"""A example to read records from mySQL and only select three fields of entire row"""
 
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions
@@ -7,21 +7,23 @@ from beam_mysql.connector import splitters
 from beam_mysql.connector.io import ReadFromMySQL
 
 
+def is_USACustomer(mysqlrecords):
+      return mysqlrecords['country'] == 'USA'
+
 class ReadRecordsOptions(PipelineOptions):
     @classmethod
     def _add_argparse_args(cls, parser):
         parser.add_value_provider_argument("--host", dest="host", default="localhost")
         parser.add_value_provider_argument("--port", dest="port", default=3306)
-        parser.add_value_provider_argument("--database", dest="database", default="max")
+        parser.add_value_provider_argument("--database", dest="database", default="classicmodels")
         parser.add_value_provider_argument("--query", dest="query", default="SELECT * FROM classicmodels.customers;")
         parser.add_value_provider_argument("--user", dest="user", default="max")
         parser.add_value_provider_argument("--password", dest="password", default="CRMS24680")
-        parser.add_value_provider_argument("--output", dest="output", default="out-read-records-result")
-
+        parser.add_value_provider_argument("--output", dest="output", default="out-filtered-records-only-result")
 
 def run():
     options = ReadRecordsOptions()
-
+    ## Create Pipeline     
     p = beam.Pipeline(options=options)
 
     read_from_mysql = ReadFromMySQL(
@@ -37,7 +39,7 @@ def run():
     (
         p
         | "ReadFromMySQL" >> read_from_mysql
-        | "NoTransform" >> beam.Map(lambda e: e)
+        | "Only select customer from USA" >> beam.Filter(is_USACustomer)
         | "WriteToText" >> beam.io.WriteToText(options.output, file_name_suffix=".txt", shard_name_template="")
     )
 

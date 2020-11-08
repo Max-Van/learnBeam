@@ -1,0 +1,36 @@
+{'customerNumber': 112, 'customerName': 'Signal Gift Stores', 'country': 'USA'}
+{'customerNumber': 124, 'customerName': 'Mini Gifts Distributors Ltd.', 'country': 'USA'}
+{'customerNumber': 129, 'customerName': 'Mini Wheels Co.', 'country': 'USA'}
+{'customerNumber': 131, 'customerName': 'Land of Toys Inc.', 'country': 'USA'}
+{'customerNumber': 151, 'customerName': 'Muscle Machine Inc', 'country': 'USA'}
+{'customerNumber': 157, 'customerName': 'Diecast Classics Inc.', 'country': 'USA'}
+{'customerNumber': 161, 'customerName': 'Technics Stores Inc.', 'country': 'USA'}
+{'customerNumber': 168, 'customerName': 'American Souvenirs Inc', 'country': 'USA'}
+{'customerNumber': 173, 'customerName': 'Cambridge Collectables Co.', 'country': 'USA'}
+{'customerNumber': 175, 'customerName': 'Gift Depot Inc.', 'country': 'USA'}
+{'customerNumber': 181, 'customerName': 'Vitachrome Inc.', 'country': 'USA'}
+{'customerNumber': 198, 'customerName': 'Auto-Moto Classics Inc.', 'country': 'USA'}
+{'customerNumber': 204, 'customerName': 'Online Mini Collectables', 'country': 'USA'}
+{'customerNumber': 205, 'customerName': 'Toys4GrownUps.com', 'country': 'USA'}
+{'customerNumber': 219, 'customerName': 'Boards & Toys Co.', 'country': 'USA'}
+{'customerNumber': 239, 'customerName': 'Collectable Mini Designs Co.', 'country': 'USA'}
+{'customerNumber': 286, 'customerName': "Marta's Replicas Co.", 'country': 'USA'}
+{'customerNumber': 319, 'customerName': 'Mini Classics', 'country': 'USA'}
+{'customerNumber': 320, 'customerName': 'Mini Creations Ltd.', 'country': 'USA'}
+{'customerNumber': 321, 'customerName': 'Corporate Gift Ideas Co.', 'country': 'USA'}
+{'customerNumber': 328, 'customerName': 'Tekni Collectables Inc.', 'country': 'USA'}
+{'customerNumber': 339, 'customerName': 'Classic Gift Ideas, Inc', 'country': 'USA'}
+{'customerNumber': 347, 'customerName': "Men 'R' US Retailers, Ltd.", 'country': 'USA'}
+{'customerNumber': 362, 'customerName': 'Gifts4AllAges.com', 'country': 'USA'}
+{'customerNumber': 363, 'customerName': 'Online Diecast Creations Co.', 'country': 'USA'}
+{'customerNumber': 379, 'customerName': 'Collectables For Less Inc.', 'country': 'USA'}
+{'customerNumber': 424, 'customerName': 'Classic Legends Inc.', 'country': 'USA'}
+{'customerNumber': 447, 'customerName': 'Gift Ideas Corp.', 'country': 'USA'}
+{'customerNumber': 450, 'customerName': 'The Sharp Gifts Warehouse', 'country': 'USA'}
+{'customerNumber': 455, 'customerName': 'Super Scale Inc.', 'country': 'USA'}
+{'customerNumber': 456, 'customerName': 'Microscale Inc.', 'country': 'USA'}
+{'customerNumber': 462, 'customerName': 'FunGiftIdeas.com', 'country': 'USA'}
+{'customerNumber': 475, 'customerName': 'West Coast Collectables Co.', 'country': 'USA'}
+{'customerNumber': 486, 'customerName': 'Motor Mint Distributors Inc.', 'country': 'USA'}
+{'customerNumber': 487, 'customerName': 'Signal Collectibles Ltd.', 'country': 'USA'}
+{'customerNumber': 495, 'customerName': 'Diecast Collectables', 'country': 'USA'}

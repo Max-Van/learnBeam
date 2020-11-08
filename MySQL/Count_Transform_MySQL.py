@@ -1,4 +1,4 @@
-"""A example to read records on mysql and output the result to file out-read-records-result.txt """
+"""A example to read records on mysql, count it and output the result to file out-read-records-count-result.txt """
 
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions
@@ -12,11 +12,11 @@ class ReadRecordsOptions(PipelineOptions):
     def _add_argparse_args(cls, parser):
         parser.add_value_provider_argument("--host", dest="host", default="localhost")
         parser.add_value_provider_argument("--port", dest="port", default=3306)
-        parser.add_value_provider_argument("--database", dest="database", default="max")
+        parser.add_value_provider_argument("--database", dest="database", default="classicmodels")
         parser.add_value_provider_argument("--query", dest="query", default="SELECT * FROM classicmodels.customers;")
         parser.add_value_provider_argument("--user", dest="user", default="max")
         parser.add_value_provider_argument("--password", dest="password", default="CRMS24680")
-        parser.add_value_provider_argument("--output", dest="output", default="out-read-records-result")
+        parser.add_value_provider_argument("--output", dest="output", default="out-read-records-count-result")
 
 
 def run():
@@ -37,7 +37,8 @@ def run():
     (
         p
         | "ReadFromMySQL" >> read_from_mysql
-        | "NoTransform" >> beam.Map(lambda e: e)
+        | 'Count all elements' >> beam.combiners.Count.Globally()
+        | 'Add some Description' >> beam.Map(lambda x: 'Total Count is : ' + str(x))
         | "WriteToText" >> beam.io.WriteToText(options.output, file_name_suffix=".txt", shard_name_template="")
     )
 
